@@ -1,0 +1,83 @@
+
+I have 2.2 yrs experience in automotive testing, have hands on experience with both Parking assistance and Climate control projects, 
+coming to parking assistance project parking assistance is front 4  and rear 4 channel redar sensor system to indicate object distance to the driver while parking it will support and  indicte 30cm to 3 meter range distance 
+Tested this feature functional requirements with all possible conditions like ,power distribution, ignition cycle,  park assist switch command, gear, vehicle speed, park assistance status, distance indication for each sensor tested all conditions with boundary, equivalent,  range transmissions in this project worked with CAN, UDS service's, Functional requirements and Fault modules 
+Coming to the functional behavior this system  have range like standby mode, Active mode, deactivate mode, Fault mode, when the pre conditions meet this system will be in active mode like set all can signals from canoe 
+Case 1:
+I/p
+1) set Power ??status signal = 'ON' and 
+2) set Ignition signal = ACC or ON or Crank (more then acc) 
+3) Set park assist switch command = ON
+4) Set Gear = Drive or Reverse
+5) set vechile speed = 0km to 12km + or - 1km
+O/p
+1) check park assist system status = active
+2) check distance indication 
+Front left sensor(1) = No object
+Front middle sensor(2&3) = No object
+Front right sensor(4) = No objectobject
+
+Rear left sensor(1) = No object
+Rear middle sensor(2&3) = No object
+Rear right sensor(4) = No objectobject
+
+3) check 
+front park assist jone status = green?? zone
+Rear park assist jone status = green?? zone
+
+Case 2:
+ I/p
+1) set Power ??status signal = 'ON' and 
+2) set Ignition signal = ACC or ON or Crank (more than acc) 
+3) Set park assist switch command = ON
+4) Set Gear = Drive or Reverse
+5) set vechile speed = 0km to 12km + or - 1km
+6) set 
+Front left sensor(1) = 30cm
+Front middle sensor(2&3) = 30cm
+Front right sensor(4) = 30cm
+
+Rear left sensor(1) = 0 CM
+Rear middle sensor(2&3) = 0 CM
+Rear right sensor(4) = 0 CM
+
+O/p
+1) check park assist system status = active
+2) check distance indication 
+Front left sensor(1) = 30cm
+Front middle sensor(2&3) = 30cm
+Front right sensor(4) = 30cm
+
+Rear left sensor(1) = No object
+Rear middle sensor(2&3) = No object
+Rear right sensor(4) = No objectobject
+
+3) check 
+front park assist jone status = Red ?? zone
+Rear park assist jone status = green?? zone
+
+and used canoe tool for test this signal with bench setup and also used Doors,  Qm,  CCM
+
+Coming to the fault modules
+
+Have different fault like 
+Can communication faults LOC & Invalid & Bus off
+Loc fault (loss of communication) & invalid fault 
+Like if disabled Gear periodical can message the particular DTC will log and if
+set gear signal = invalid 
+Short CAN high to low for bus off fault
+ 
+faults for all sensors
+
+Short circuit faults
+Short to ground 
+Short to battery??
+Open circuit
+
+Voltage ?? faults
+Over voltage
+Under voltage
+
+Load faults
+Over load 
+Under load
